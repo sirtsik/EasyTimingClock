@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:id="@+id/mass_start_dialog_container"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/pick_starting_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pick the starting time (HH:mm)"/>
+
+    <TimePicker
+        android:id="@+id/start_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner">
+    </TimePicker>
+
+    <TextView
+        android:id="@+id/pick_interval_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:text="Pick the interval between starts (mm:ss)"/>
+
+    <LinearLayout
+        android:id="@+id/interval_picker_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <NumberPicker
+            android:id="@+id/minutes_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/seconds_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/button_cancel_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:layout_gravity="start"
+            android:layout_marginEnd="5dp"/>
+        <Button
+            android:id="@+id/button_confirm_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+</LinearLayout>
